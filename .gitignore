@@ -1,0 +1,48 @@
+# .NET build artifacts
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+publish/
+out/
+
+# Test and coverage artifacts
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage/
+.coverage/
+
+# NuGet artifacts
+packages/
+*.nupkg
+*.snupkg
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE files
+.vs/
+.idea/
+*.sln.iml
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Local config overrides
+appsettings.Local*.json
+appsettings.Local*.yml
+appsettings.*.local.json
+appsettings.*.local.yml
+
+# OS/system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
