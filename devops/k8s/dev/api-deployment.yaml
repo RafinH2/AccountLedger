@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account-ledger-api
+  namespace: account-ledger-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: account-ledger-api
+  template:
+    metadata:
+      labels:
+        app: account-ledger-api
+    spec:
+      containers:
+        - name: api
+          image: account-ledger-api:dev
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: account-ledger-config
+            - secretRef:
+                name: account-ledger-secret
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+            initialDelaySeconds: 20
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi

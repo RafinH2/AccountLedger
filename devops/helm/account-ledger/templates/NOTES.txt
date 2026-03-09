@@ -1,0 +1,5 @@
+1. Check pods:
+   kubectl get pods -n {{ include "account-ledger.namespace" . }}
+
+2. Get API service:
+   kubectl get svc {{ include "account-ledger.apiName" . }} -n {{ include "account-ledger.namespace" . }}

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "account-ledger.apiName" . }}
+  namespace: {{ include "account-ledger.namespace" . }}
+  labels:
+    {{- include "account-ledger.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.api.service.type }}
+  selector:
+    app: {{ include "account-ledger.apiName" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+  ports:
+    - name: http
+      port: {{ .Values.api.service.port }}
+      targetPort: {{ .Values.api.service.targetPort }}

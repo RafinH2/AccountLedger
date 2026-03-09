@@ -1,0 +1,9 @@
+# Common VCS files
+.git/
+.idea/
+.vscode/
+
+# Build outputs
+bin/
+obj/
+*.user

@@ -1,0 +1,17 @@
+{{- if .Values.postgres.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "account-ledger.postgresName" . }}
+  namespace: {{ include "account-ledger.namespace" . }}
+  labels:
+    {{- include "account-ledger.labels" . | nindent 4 }}
+spec:
+  selector:
+    app: {{ include "account-ledger.postgresName" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+  ports:
+    - name: postgres
+      port: {{ .Values.postgres.service.port }}
+      targetPort: {{ .Values.postgres.service.targetPort }}
+{{- end }}
