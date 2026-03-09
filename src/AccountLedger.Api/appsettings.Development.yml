@@ -1,0 +1,15 @@
+ConnectionStrings:
+  Default: "Host=localhost;Port=5432;Database=account_ledger_dev;Username=ledger_dev;Password=ledger_dev_pwd"
+
+Serilog:
+  MinimumLevel:
+    Default: Debug
+
+Logging:
+  LogLevel:
+    Default: Debug
+    Microsoft.AspNetCore: Warning
+
+Api:
+  Swagger:
+    Enabled: true

@@ -1,0 +1,161 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountLedger.Api", "src\AccountLedger.Api\AccountLedger.Api.csproj", "{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountLedger.Application", "src\AccountLedger.Application\AccountLedger.Application.csproj", "{51DE510D-7422-4A4E-8776-CF2BED87D173}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountLedger.Domain", "src\AccountLedger.Domain\AccountLedger.Domain.csproj", "{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountLedger.Infrastructure", "src\AccountLedger.Infrastructure\AccountLedger.Infrastructure.csproj", "{DF008821-5603-4F4B-BD28-6D98996D3281}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountLedger.UnitTests", "tests\AccountLedger.UnitTests\AccountLedger.UnitTests.csproj", "{1CACA088-2F9A-40BE-9BA1-2652338B3908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountLedger.IntegrationTests", "tests\AccountLedger.IntegrationTests\AccountLedger.IntegrationTests.csproj", "{09A9444D-AE38-455B-BE05-A5B93DD1EA58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5C0E2B51-6A8D-4B3E-9A3F-4D8A9F58C001}"
+	ProjectSection(SolutionItems) = preProject
+		dockerignore = .dockerignore
+		gitignore = .gitignore
+		AccountLedger.sln = AccountLedger.sln
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		README.md = README.md
+		T4.pdf = T4.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{8B23C6D4-4F35-4F7C-B6ED-2D4E7A0E4A02}"
+	ProjectSection(SolutionItems) = preProject
+		docs\architecture.md = docs\architecture.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{4F0C8E11-9A7B-4C17-9582-7B02BDF9D303}"
+	ProjectSection(SolutionItems) = preProject
+		k8s\dev\api-deployment.yaml = k8s\dev\api-deployment.yaml
+		k8s\dev\api-service.yaml = k8s\dev\api-service.yaml
+		k8s\dev\configmap.yaml = k8s\dev\configmap.yaml
+		k8s\dev\namespace.yaml = k8s\dev\namespace.yaml
+		k8s\dev\postgres-deployment.yaml = k8s\dev\postgres-deployment.yaml
+		k8s\dev\postgres-pvc.yaml = k8s\dev\postgres-pvc.yaml
+		k8s\dev\postgres-service.yaml = k8s\dev\postgres-service.yaml
+		k8s\dev\secret.yaml = k8s\dev\secret.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helm", "helm", "{A0D9A2F4-1B9A-4D8F-AFA5-38D693A4F1A7}"
+	ProjectSection(SolutionItems) = preProject
+		helm\account-ledger\.helmignore = helm\account-ledger\.helmignore
+		helm\account-ledger\Chart.yaml = helm\account-ledger\Chart.yaml
+		helm\account-ledger\values.yaml = helm\account-ledger\values.yaml
+		helm\account-ledger\templates\_helpers.tpl = helm\account-ledger\templates\_helpers.tpl
+		helm\account-ledger\templates\api-deployment.yaml = helm\account-ledger\templates\api-deployment.yaml
+		helm\account-ledger\templates\api-service.yaml = helm\account-ledger\templates\api-service.yaml
+		helm\account-ledger\templates\configmap.yaml = helm\account-ledger\templates\configmap.yaml
+		helm\account-ledger\templates\namespace.yaml = helm\account-ledger\templates\namespace.yaml
+		helm\account-ledger\templates\NOTES.txt = helm\account-ledger\templates\NOTES.txt
+		helm\account-ledger\templates\postgres-deployment.yaml = helm\account-ledger\templates\postgres-deployment.yaml
+		helm\account-ledger\templates\postgres-pvc.yaml = helm\account-ledger\templates\postgres-pvc.yaml
+		helm\account-ledger\templates\postgres-service.yaml = helm\account-ledger\templates\postgres-service.yaml
+		helm\account-ledger\templates\secret.yaml = helm\account-ledger\templates\secret.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Debug|x64.Build.0 = Debug|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Debug|x86.Build.0 = Debug|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Release|x64.ActiveCfg = Release|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Release|x64.Build.0 = Release|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Release|x86.ActiveCfg = Release|Any CPU
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C}.Release|x86.Build.0 = Release|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Debug|x64.Build.0 = Debug|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Debug|x86.Build.0 = Debug|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Release|x64.ActiveCfg = Release|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Release|x64.Build.0 = Release|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Release|x86.ActiveCfg = Release|Any CPU
+		{51DE510D-7422-4A4E-8776-CF2BED87D173}.Release|x86.Build.0 = Release|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Debug|x64.Build.0 = Debug|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Debug|x86.Build.0 = Debug|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Release|x64.ActiveCfg = Release|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Release|x64.Build.0 = Release|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9}.Release|x86.Build.0 = Release|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Debug|x64.Build.0 = Debug|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Debug|x86.Build.0 = Debug|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Release|x64.ActiveCfg = Release|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Release|x64.Build.0 = Release|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Release|x86.ActiveCfg = Release|Any CPU
+		{DF008821-5603-4F4B-BD28-6D98996D3281}.Release|x86.Build.0 = Release|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Debug|x64.Build.0 = Debug|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Debug|x86.Build.0 = Debug|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Release|x64.ActiveCfg = Release|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Release|x64.Build.0 = Release|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Release|x86.ActiveCfg = Release|Any CPU
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908}.Release|x86.Build.0 = Release|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Debug|x64.Build.0 = Debug|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Debug|x86.Build.0 = Debug|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Release|x64.ActiveCfg = Release|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Release|x64.Build.0 = Release|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Release|x86.ActiveCfg = Release|Any CPU
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2690ABF-8E91-4A4D-B6AB-019A370FE40C} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{51DE510D-7422-4A4E-8776-CF2BED87D173} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{99CBA535-6F88-4A77-B5CF-26D7E91FBBE9} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{DF008821-5603-4F4B-BD28-6D98996D3281} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{1CACA088-2F9A-40BE-9BA1-2652338B3908} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{09A9444D-AE38-455B-BE05-A5B93DD1EA58} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+	EndGlobalSection
+EndGlobal

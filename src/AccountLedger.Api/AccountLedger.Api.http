@@ -1,0 +1,35 @@
+@AccountLedger.Api_HostAddress = http://localhost:8080
+@clientId = cfaa0d3f-7fea-4423-9f69-ebff826e2f89
+@creditId = 8f0452b2-867b-4ef8-9a9d-3c9c03d9afdf
+@debitId = 05eb235c-4955-4c16-bcdd-34e8178228de
+
+POST {{AccountLedger.Api_HostAddress}}/credit
+Content-Type: application/json
+
+{
+  "id": "{{creditId}}",
+  "clientId": "{{clientId}}",
+  "dateTime": "2026-03-03T10:00:00Z",
+  "amount": 100.00
+}
+
+###
+
+POST {{AccountLedger.Api_HostAddress}}/debit
+Content-Type: application/json
+
+{
+  "id": "{{debitId}}",
+  "clientId": "{{clientId}}",
+  "dateTime": "2026-03-03T10:01:00Z",
+  "amount": 30.00
+}
+
+###
+
+POST {{AccountLedger.Api_HostAddress}}/revert?id={{debitId}}
+
+###
+
+GET {{AccountLedger.Api_HostAddress}}/balance?id={{clientId}}
+Accept: application/json

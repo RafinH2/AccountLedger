@@ -1,0 +1,36 @@
+AllowedHosts: "*"
+
+ConnectionStrings:
+  Default: "Host=localhost;Port=5432;Database=account_ledger;Username=postgres;Password=postgres"
+
+Serilog:
+  Using:
+    - Serilog.Sinks.Console
+  MinimumLevel:
+    Default: Information
+    Override:
+      Microsoft: Warning
+      Microsoft.AspNetCore: Warning
+  Enrich:
+    - FromLogContext
+  WriteTo:
+    - Name: Console
+
+Logging:
+  LogLevel:
+    Default: Information
+    Microsoft.AspNetCore: Warning
+
+Api:
+  Swagger:
+    Enabled: false
+
+Database:
+  Migrations:
+    MaxAttempts: 10
+    DelaySeconds: 3
+
+Infrastructure:
+  DuplicateRead:
+    Attempts: 5
+    DelayMilliseconds: 50
