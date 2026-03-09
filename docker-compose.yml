@@ -18,8 +18,8 @@ services:
 
   api:
     build:
-      context: ..
-      dockerfile: devops/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     container_name: account-ledger-api
     environment:
       ASPNETCORE_ENVIRONMENT: Development

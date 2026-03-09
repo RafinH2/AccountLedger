@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		dockerignore = .dockerignore
 		gitignore = .gitignore
 		AccountLedger.sln = AccountLedger.sln
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
 		README.md = README.md
 		T4.pdf = T4.pdf
 	EndProjectSection
@@ -34,10 +36,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{8B23C6D4-4
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devops", "devops", "{E3F86D90-2D1A-4AAE-A509-CF5D7A7E4B11}"
-	ProjectSection(SolutionItems) = preProject
-		devops\docker-compose.yml = devops\docker-compose.yml
-		devops\Dockerfile = devops\Dockerfile
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "devops\k8s", "{4F0C8E11-9A7B-4C17-9582-7B02BDF9D303}"
 	ProjectSection(SolutionItems) = preProject

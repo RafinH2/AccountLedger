@@ -41,7 +41,7 @@
 ## 4. Быстрый старт через Docker Compose
 
 ```bash
-docker compose -f devops/docker-compose.yml up --build
+docker compose up --build
 ```
 
 После старта API доступно: `http://localhost:8080`.
@@ -267,8 +267,8 @@ devops/
     dev/
   helm/
     account-ledger/
-  docker-compose.yml
-  Dockerfile
+docker-compose.yml
+Dockerfile
 infa-helm-values/
 docs/
 ```
