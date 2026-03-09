@@ -24,8 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		dockerignore = .dockerignore
 		gitignore = .gitignore
 		AccountLedger.sln = AccountLedger.sln
-		docker-compose.yml = docker-compose.yml
-		Dockerfile = Dockerfile
 		README.md = README.md
 		T4.pdf = T4.pdf
 	EndProjectSection
@@ -35,33 +33,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{8B23C6D4-4
 		docs\architecture.md = docs\architecture.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{4F0C8E11-9A7B-4C17-9582-7B02BDF9D303}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "devops", "devops", "{E3F86D90-2D1A-4AAE-A509-CF5D7A7E4B11}"
 	ProjectSection(SolutionItems) = preProject
-		k8s\dev\api-deployment.yaml = k8s\dev\api-deployment.yaml
-		k8s\dev\api-service.yaml = k8s\dev\api-service.yaml
-		k8s\dev\configmap.yaml = k8s\dev\configmap.yaml
-		k8s\dev\namespace.yaml = k8s\dev\namespace.yaml
-		k8s\dev\postgres-deployment.yaml = k8s\dev\postgres-deployment.yaml
-		k8s\dev\postgres-pvc.yaml = k8s\dev\postgres-pvc.yaml
-		k8s\dev\postgres-service.yaml = k8s\dev\postgres-service.yaml
-		k8s\dev\secret.yaml = k8s\dev\secret.yaml
+		devops\docker-compose.yml = devops\docker-compose.yml
+		devops\Dockerfile = devops\Dockerfile
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helm", "helm", "{A0D9A2F4-1B9A-4D8F-AFA5-38D693A4F1A7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "devops\k8s", "{4F0C8E11-9A7B-4C17-9582-7B02BDF9D303}"
 	ProjectSection(SolutionItems) = preProject
-		helm\account-ledger\.helmignore = helm\account-ledger\.helmignore
-		helm\account-ledger\Chart.yaml = helm\account-ledger\Chart.yaml
-		helm\account-ledger\values.yaml = helm\account-ledger\values.yaml
-		helm\account-ledger\templates\_helpers.tpl = helm\account-ledger\templates\_helpers.tpl
-		helm\account-ledger\templates\api-deployment.yaml = helm\account-ledger\templates\api-deployment.yaml
-		helm\account-ledger\templates\api-service.yaml = helm\account-ledger\templates\api-service.yaml
-		helm\account-ledger\templates\configmap.yaml = helm\account-ledger\templates\configmap.yaml
-		helm\account-ledger\templates\namespace.yaml = helm\account-ledger\templates\namespace.yaml
-		helm\account-ledger\templates\NOTES.txt = helm\account-ledger\templates\NOTES.txt
-		helm\account-ledger\templates\postgres-deployment.yaml = helm\account-ledger\templates\postgres-deployment.yaml
-		helm\account-ledger\templates\postgres-pvc.yaml = helm\account-ledger\templates\postgres-pvc.yaml
-		helm\account-ledger\templates\postgres-service.yaml = helm\account-ledger\templates\postgres-service.yaml
-		helm\account-ledger\templates\secret.yaml = helm\account-ledger\templates\secret.yaml
+		devops\k8s\dev\api-deployment.yaml = devops\k8s\dev\api-deployment.yaml
+		devops\k8s\dev\api-service.yaml = devops\k8s\dev\api-service.yaml
+		devops\k8s\dev\configmap.yaml = devops\k8s\dev\configmap.yaml
+		devops\k8s\dev\namespace.yaml = devops\k8s\dev\namespace.yaml
+		devops\k8s\dev\postgres-deployment.yaml = devops\k8s\dev\postgres-deployment.yaml
+		devops\k8s\dev\postgres-pvc.yaml = devops\k8s\dev\postgres-pvc.yaml
+		devops\k8s\dev\postgres-service.yaml = devops\k8s\dev\postgres-service.yaml
+		devops\k8s\dev\secret.yaml = devops\k8s\dev\secret.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "helm", "devops\helm", "{A0D9A2F4-1B9A-4D8F-AFA5-38D693A4F1A7}"
+	ProjectSection(SolutionItems) = preProject
+		devops\helm\account-ledger\.helmignore = devops\helm\account-ledger\.helmignore
+		devops\helm\account-ledger\Chart.yaml = devops\helm\account-ledger\Chart.yaml
+		devops\helm\account-ledger\values.yaml = devops\helm\account-ledger\values.yaml
+		devops\helm\account-ledger\templates\_helpers.tpl = devops\helm\account-ledger\templates\_helpers.tpl
+		devops\helm\account-ledger\templates\api-deployment.yaml = devops\helm\account-ledger\templates\api-deployment.yaml
+		devops\helm\account-ledger\templates\api-service.yaml = devops\helm\account-ledger\templates\api-service.yaml
+		devops\helm\account-ledger\templates\configmap.yaml = devops\helm\account-ledger\templates\configmap.yaml
+		devops\helm\account-ledger\templates\namespace.yaml = devops\helm\account-ledger\templates\namespace.yaml
+		devops\helm\account-ledger\templates\NOTES.txt = devops\helm\account-ledger\templates\NOTES.txt
+		devops\helm\account-ledger\templates\postgres-deployment.yaml = devops\helm\account-ledger\templates\postgres-deployment.yaml
+		devops\helm\account-ledger\templates\postgres-pvc.yaml = devops\helm\account-ledger\templates\postgres-pvc.yaml
+		devops\helm\account-ledger\templates\postgres-service.yaml = devops\helm\account-ledger\templates\postgres-service.yaml
+		devops\helm\account-ledger\templates\secret.yaml = devops\helm\account-ledger\templates\secret.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infa-helm-values", "infa-helm-values", "{B6D50F1D-9F58-4D7F-9A5A-ADF9D8D2F2C3}"
+	ProjectSection(SolutionItems) = preProject
+		infa-helm-values\.gitkeep = infa-helm-values\.gitkeep
+		infa-helm-values\README.md = infa-helm-values\README.md
 	EndProjectSection
 EndProject
 Global
@@ -157,5 +167,7 @@ Global
 		{DF008821-5603-4F4B-BD28-6D98996D3281} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{1CACA088-2F9A-40BE-9BA1-2652338B3908} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{09A9444D-AE38-455B-BE05-A5B93DD1EA58} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{4F0C8E11-9A7B-4C17-9582-7B02BDF9D303} = {E3F86D90-2D1A-4AAE-A509-CF5D7A7E4B11}
+		{A0D9A2F4-1B9A-4D8F-AFA5-38D693A4F1A7} = {E3F86D90-2D1A-4AAE-A509-CF5D7A7E4B11}
 	EndGlobalSection
 EndGlobal
